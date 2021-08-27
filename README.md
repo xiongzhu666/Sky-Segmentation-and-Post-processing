@@ -5,7 +5,7 @@ About Sky segmentation, I trained the model by u2net, the result looks ok
 
 Dependency：OpenCV
 
-![compare_1](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/compare_1.png)
+![vis2](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis2.png)
 
-![compare_2](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/compare_2.png)
+![vis1](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis1.png)
 
