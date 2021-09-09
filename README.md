@@ -1,7 +1,7 @@
 # Sky-Segmentation-and-Post-processing
 This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172, but I didn't implemente the "Density Estimation" mentioned in the paper
 
-About Sky segmentation, I trained the sky-segmentation model by u2net, the result looks ok
+About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the result looks good. please refer to https://github.com/xuebinqin/U-2-Net about detail,
 
 Dependency：OpenCV
 
