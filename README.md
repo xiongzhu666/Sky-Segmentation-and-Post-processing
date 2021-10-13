@@ -3,9 +3,12 @@ This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 th
 
 About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the result looks good. please refer to https://github.com/xuebinqin/U-2-Net about training detail
 
-Dependency：OpenCV
+Dependency：OpenCV, ncnn
 
 The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details
+
+**Upload a small sky-seg model for demo（We couldn't public the high-precision model because it used in our product）**
+**Upload a sky-seg demo cpp inferenced by ncnn**
 
 ![vis2](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis2.png)
 
