@@ -9,7 +9,7 @@ The Sky-mask Post-Processing show a good performence in the scene of tree as bel
 
 **2021/10/13 Update**
 
-**Upload a small sky-seg model for demo（We couldn't public the high-precision model because it used in our product）**
+**Upload a small sky-seg model（traind by u2netp） for demo（We couldn't public the high-precision model because it used in our product）**
 
 **Upload a sky-seg demo cpp inferenced by ncnn**
 
