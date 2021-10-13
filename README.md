@@ -7,7 +7,7 @@ Dependency：OpenCV, ncnn
 
 The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details
 
-**2021/10/13 Update **
+**2021/10/13 Update**
 
 **Upload a small sky-seg model for demo（We couldn't public the high-precision model because it used in our product）**
 
