@@ -21,3 +21,7 @@ but it also has some defect：in the scene of building, some detail of building 
 
 ![vis3](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis3.png)
 
+For some special textured clouds, The algorithm has some flaws as below
+
+![vis4](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis4.png)
+
