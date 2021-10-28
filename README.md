@@ -17,11 +17,11 @@ The Sky-mask Post-Processing show a good performence in the scene of tree as bel
 
 ![vis1](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis1.png)
 
-but it also has some defect：in the scene of building, some detail of building will be considered as sky by mistake
+**but it also has some defect：in the scene of building, some detail of building will be considered as sky by mistake**
 
 ![vis3](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis3.png)
 
-For some special textured clouds, The algorithm has some flaws as below
+**For some special textured clouds, The algorithm has some flaws as below**
 
 ![vis4](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis4.png)
 
