@@ -1,5 +1,5 @@
 # Sky-Segmentation-and-Post-processing
-This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 that public on 2020, the repo is for sky mask post-processing. but I didn't implemente the "Density Estimation" mentioned in the paper
+This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 that published on 2020, the repo is for sky mask post-processing. but I didn't implemente the "Density Estimation" mentioned in the paper
 
 About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the result looks good. please refer to https://github.com/xuebinqin/U-2-Net about training detail
 
