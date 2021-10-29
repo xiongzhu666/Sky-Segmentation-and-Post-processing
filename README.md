@@ -5,6 +5,9 @@ About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the res
 
 Dependency：OpenCV, ncnn
 
+seg_demo.cpp is for sky-seg and input is image 
+main.cpp is for mask post-process to refine the mask. inputs are image and the mask interenced by model.
+
 The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details
 
 **2021/10/13 Update**
