@@ -25,5 +25,5 @@ The Sky-mask Post-Processing show a good performence in the scene of tree as bel
 
 ![vis4](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis4.png)
 
-**Next TODO: the U-2-Net couldn't run in real-time in mobile device(about 300ms in Snapdragon 888). even though u2netp size is much smaller than u2net, but the interence speed doesn't improve obviously. I plan to train a real-time model by normanl unet so that it could run in real-time in mobile device.
+**Next TODO: the U-2-Net couldn't run in real-time in mobile device(about 300ms in Snapdragon 888). even though u2netp size is much smaller than u2net, but the interence speed doesn't improve obviously. I plan to train a real-time model by normanl unet so that it could run in real-time in mobile device.**
 
