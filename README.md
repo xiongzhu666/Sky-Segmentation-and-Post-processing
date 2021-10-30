@@ -1,5 +1,5 @@
 # Sky-Segmentation-and-Post-processing
-This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 that published on 2020, the repo is for sky mask post-processing. but I didn't implemente the "Density Estimation" mentioned in the paper
+This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 that published on 2020, the repo is for sky mask post-processing. but I didn't implemente the "Density Estimation" mentioned in the paper. 
 
 About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the result looks good. please refer to https://github.com/xuebinqin/U-2-Net about training detail
 
@@ -9,7 +9,7 @@ seg_demo.cpp is for sky-seg and input is image
 
 main.cpp is for mask post-process to refine the mask. inputs are image and the mask interenced by model.
 
-The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details
+The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details.In addition, the post-process is only for sky-mask.perhaps it won't get the same good performance when you apply it on other class segmentation.
 
 **2021/10/13 Update**
 
