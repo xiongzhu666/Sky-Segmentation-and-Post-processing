@@ -17,7 +17,7 @@ The Sky-mask Post-Processing show a good performence in the scene of tree as bel
 
 **Upload a sky-seg demo cpp inferenced by ncnn**
 
-![vis2](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis2.png)
+
 
 ![vis1](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/vis1.png)
 
