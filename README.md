@@ -13,7 +13,7 @@ The Sky-mask Post-Processing show a good performence in the scene of tree as bel
 
 **2021/12/29 Update: upload code interenced by onnxruntime, you need to install the package by pip install onnxruntime**
 
-baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw      code：4tmm
+onnx model(167M) baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw      code：4tmm
 
 **2021/10/13 Update**
 
