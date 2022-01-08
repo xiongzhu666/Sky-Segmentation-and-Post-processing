@@ -450,7 +450,8 @@ int main() {
 
     Mat conf = confidence.clone();
     Mat refer1 = reference.clone();
-    cv::Mat reference_small = weighted_downsample(refer1, confidence, 256, cv::Size(0,0));
+    int kernel = 256;
+    cv::Mat reference_small = weighted_downsample(refer1, confidence, kernel, cv::Size(0,0));
 
     int small_h = reference_small.size[0];
     int small_w = reference_small.size[1];
