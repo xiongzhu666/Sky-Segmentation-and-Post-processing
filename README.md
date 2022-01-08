@@ -7,7 +7,7 @@ Dependency：OpenCV, ncnn
 
 seg_demo.cpp is for sky-seg and input is image 
 
-main.cpp is for mask post-process to refine the mask. inputs are image and the mask inferenced by model.
+mask_refine.cpp is for mask post-process to refine the mask. inputs are image and the mask inferenced by model.
 
 The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details.In addition, the post-process is only for sky-mask.perhaps it won't get the same good performance when you apply it on other class segmentation.
 
