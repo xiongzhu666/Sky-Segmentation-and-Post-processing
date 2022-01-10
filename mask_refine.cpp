@@ -426,13 +426,10 @@ int main() {
     Mat bgr = imread("../eval/IMG_20210309_211233.jpg",CV_32F);
     cvtColor(bgr,bgr,CV_BGR2RGB);
     Mat src = imread("../eval/IMG_20210309_211233.png",CV_32F);
-//    Mat bgr = imread("D:\\Projects\\U-2-Net\\test_data\\mophy_nubia\\IMG_20210518_190449.jpg",CV_32F);
-//    Mat src = imread("D:\\Projects\\U-2-Net\\mophy_nubia_result\\IMG_20210518_190449_unet.png",CV_32F);
     std::string pathname = "../eval/";
     std::string outname = pathname + "IMG_20210309_211233" + "_result.png";
     int W = src.cols;
     int H = src.rows;
-
 
     Mat reference = bgr.clone();
 
@@ -444,7 +441,6 @@ int main() {
     ch1.convertTo(mask, CV_32F, 1.0/255, 0);
     reference.convertTo(reference, CV_32FC3, 1.0/255, 0);
     Mat img = reference.clone();
-
 
     Mat confidence = probability_to_confidence(mask,reference);
 
