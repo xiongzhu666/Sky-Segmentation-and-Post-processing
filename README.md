@@ -17,7 +17,7 @@ onnx model(167M) baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw     
 
 **2021/10/13 Update**
 
-**Upload a small sky-seg model（traind by u2netp） for demo（We couldn't public the high-precision model because it used in our product）**
+**Upload a small sky-seg model of 2Mb（traind by u2netp） for demo（We couldn't public the high-precision model because it used in our product）**
 
 **Upload a sky-seg demo cpp inferenced by ncnn**
 
