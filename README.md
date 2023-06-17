@@ -37,3 +37,4 @@ onnx model(167M) baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw     
 
 ![img](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/output.gif)
 
+![fun1](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/fun1.png)
