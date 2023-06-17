@@ -1,4 +1,6 @@
 # Sky-Segmentation-and-Post-processing
+![img](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/output.gif)
+
 This is a C++ implementation from this paper https://arxiv.org/abs/2006.10172 that published on 2020, the repo is for sky mask post-processing. but I didn't implemente the "Density Estimation" mentioned in the paper. 
 
 About Sky segmentation, I trained the sky-segmentation model by U-2-Net, the result looks good. please refer to https://github.com/xuebinqin/U-2-Net about training detail
@@ -35,5 +37,5 @@ onnx model(167M) baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw     
 
 **Next TODO: the U-2-Net couldn't run in real-time in mobile device(about 300ms in Snapdragon 888). even though u2netp size is much smaller than u2net, but the interence speed doesn't improve obviously. I plan to train a real-time model by normanl unet so that it could run in real-time in mobile device.**
 
-![img](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/output.gif)
+
 
