@@ -1,0 +1,369 @@
+7767517
+367 450
+Input                    in0                      0 1 in0
+Convolution              conv_36                  1 1 in0 1 0=8 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=216
+GroupNorm                gn_81                    1 1 1 2 0=4 1=8 2=1.000000e-05 3=1
+Pooling                  maxpool2d_11             1 1 2 3 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+GELU                     gelu_0                   1 1 3 4
+Split                    splitncnn_0              1 2 4 5 6
+Convolution              conv_37                  1 1 6 7 0=16 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=1152
+GroupNorm                gn_82                    1 1 7 8 0=4 1=16 2=1.000000e-05 3=1
+Pooling                  maxpool2d_12             1 1 8 9 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+GELU                     gelu_1                   1 1 9 10
+Split                    splitncnn_1              1 2 10 11 12
+Convolution              conv_38                  1 1 12 13 0=24 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=3456
+GroupNorm                gn_83                    1 1 13 14 0=4 1=24 2=1.000000e-05 3=1
+Pooling                  maxpool2d_13             1 1 14 15 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+GELU                     gelu_2                   1 1 15 16
+Split                    splitncnn_2              1 2 16 17 18
+Permute                  permute_128              1 1 18 19 0=3
+LayerNorm                ln_91                    1 1 19 20 0=24 1=1.000000e-06 2=1
+Permute                  permute_129              1 1 20 21 0=4
+Slice                    chunk_0                  1 4 21 22 23 24 25 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_404            0 1 26 0=48 1=48 2=6
+BinaryOp                 mul_0                    2 1 22 26 27 0=2
+MemoryData               pnnx_fold_423            0 1 28 0=48 1=6 2=1
+Permute                  permute_130              1 1 23 29 0=4
+BinaryOp                 mul_1                    2 1 29 28 30 0=2
+MemoryData               pnnx_fold_444            0 1 31 0=48 1=6 2=1
+Permute                  permute_131              1 1 24 32 0=2
+BinaryOp                 mul_2                    2 1 32 31 33 0=2
+Convolution              conv_39                  1 1 25 34 0=6 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=36
+GELU                     gelu_69                  1 1 34 35
+Permute                  permute_133              1 1 30 36 0=3
+Permute                  permute_132              1 1 33 37 0=2
+ConvolutionDepthWise     convdw_226               1 1 35 38 0=6 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=54 7=6
+Concat                   cat_0                    4 1 27 36 37 38 39 0=0
+Permute                  permute_134              1 1 39 40 0=3
+LayerNorm                ln_92                    1 1 40 41 0=24 1=1.000000e-06 2=1
+Permute                  permute_135              1 1 41 42 0=4
+ConvolutionDepthWise     convdw_227               1 1 42 43 0=24 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=216 7=24
+GELU                     gelu_70                  1 1 43 44
+Convolution              conv_40                  1 1 44 45 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=768
+GroupNorm                gn_84                    1 1 45 46 0=4 1=32 2=1.000000e-05 3=1
+Pooling                  maxpool2d_14             1 1 46 47 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+GELU                     gelu_3                   1 1 47 48
+Split                    splitncnn_3              1 2 48 49 50
+Permute                  permute_136              1 1 50 51 0=3
+LayerNorm                ln_93                    1 1 51 52 0=32 1=1.000000e-06 2=1
+Permute                  permute_137              1 1 52 53 0=4
+Slice                    chunk_1                  1 4 53 54 55 56 57 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_552            0 1 58 0=24 1=24 2=8
+BinaryOp                 mul_3                    2 1 54 58 59 0=2
+MemoryData               pnnx_fold_571            0 1 60 0=24 1=8 2=1
+Permute                  permute_138              1 1 55 61 0=4
+BinaryOp                 mul_4                    2 1 61 60 62 0=2
+MemoryData               pnnx_fold_592            0 1 63 0=24 1=8 2=1
+Permute                  permute_139              1 1 56 64 0=2
+BinaryOp                 mul_5                    2 1 64 63 65 0=2
+Convolution              conv_41                  1 1 57 66 0=8 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=64
+GELU                     gelu_71                  1 1 66 67
+Permute                  permute_141              1 1 62 68 0=3
+Permute                  permute_140              1 1 65 69 0=2
+ConvolutionDepthWise     convdw_228               1 1 67 70 0=8 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=72 7=8
+Concat                   cat_1                    4 1 59 68 69 70 71 0=0
+Permute                  permute_142              1 1 71 72 0=3
+LayerNorm                ln_94                    1 1 72 73 0=32 1=1.000000e-06 2=1
+Permute                  permute_143              1 1 73 74 0=4
+ConvolutionDepthWise     convdw_229               1 1 74 75 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=288 7=32
+GELU                     gelu_72                  1 1 75 76
+Convolution              conv_42                  1 1 76 77 0=48 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=1536
+GroupNorm                gn_85                    1 1 77 78 0=4 1=48 2=1.000000e-05 3=1
+Pooling                  maxpool2d_15             1 1 78 79 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+GELU                     gelu_4                   1 1 79 80
+Split                    splitncnn_4              1 2 80 81 82
+Permute                  permute_144              1 1 82 83 0=3
+LayerNorm                ln_95                    1 1 83 84 0=48 1=1.000000e-06 2=1
+Permute                  permute_145              1 1 84 85 0=4
+Slice                    chunk_2                  1 4 85 86 87 88 89 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_700            0 1 90 0=12 1=12 2=12
+BinaryOp                 mul_6                    2 1 86 90 91 0=2
+MemoryData               pnnx_fold_719            0 1 92 0=12 1=12 2=1
+Permute                  permute_146              1 1 87 93 0=4
+BinaryOp                 mul_7                    2 1 93 92 94 0=2
+MemoryData               pnnx_fold_740            0 1 95 0=12 1=12 2=1
+Permute                  permute_147              1 1 88 96 0=2
+BinaryOp                 mul_8                    2 1 96 95 97 0=2
+Convolution              conv_43                  1 1 89 98 0=12 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=144
+GELU                     gelu_73                  1 1 98 99
+Permute                  permute_149              1 1 94 100 0=3
+Permute                  permute_148              1 1 97 101 0=2
+ConvolutionDepthWise     convdw_230               1 1 99 102 0=12 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=108 7=12
+Concat                   cat_2                    4 1 91 100 101 102 103 0=0
+Permute                  permute_150              1 1 103 104 0=3
+LayerNorm                ln_96                    1 1 104 105 0=48 1=1.000000e-06 2=1
+Permute                  permute_151              1 1 105 106 0=4
+ConvolutionDepthWise     convdw_231               1 1 106 107 0=48 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=432 7=48
+GELU                     gelu_74                  1 1 107 108
+Convolution              conv_44                  1 1 108 109 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=3072
+GELU                     gelu_5                   1 1 109 110
+Split                    splitncnn_5              1 2 110 111 112
+Permute                  permute_152              1 1 112 113 0=3
+LayerNorm                ln_97                    1 1 113 114 0=64 1=1.000000e-06 2=1
+Permute                  permute_153              1 1 114 115 0=4
+Slice                    chunk_3                  1 4 115 116 117 118 119 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_848            0 1 120 0=12 1=12 2=16
+BinaryOp                 mul_9                    2 1 116 120 121 0=2
+MemoryData               pnnx_fold_867            0 1 122 0=12 1=16 2=1
+Permute                  permute_154              1 1 117 123 0=4
+BinaryOp                 mul_10                   2 1 123 122 124 0=2
+MemoryData               pnnx_fold_888            0 1 125 0=12 1=16 2=1
+Permute                  permute_155              1 1 118 126 0=2
+BinaryOp                 mul_11                   2 1 126 125 127 0=2
+Convolution              conv_45                  1 1 119 128 0=16 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=256
+GELU                     gelu_75                  1 1 128 129
+Permute                  permute_157              1 1 124 130 0=3
+Permute                  permute_156              1 1 127 131 0=2
+ConvolutionDepthWise     convdw_232               1 1 129 132 0=16 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=144 7=16
+Concat                   cat_3                    4 1 121 130 131 132 133 0=0
+Permute                  permute_158              1 1 133 134 0=3
+LayerNorm                ln_98                    1 1 134 135 0=64 1=1.000000e-06 2=1
+Permute                  permute_159              1 1 135 136 0=4
+ConvolutionDepthWise     convdw_233               1 1 136 137 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=576 7=64
+GELU                     gelu_76                  1 1 137 138
+Convolution              conv_46                  1 1 138 139 0=48 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=3072
+GroupNorm                gn_86                    1 1 139 140 0=4 1=48 2=1.000000e-05 3=1
+GELU                     gelu_6                   1 1 140 141
+Split                    splitncnn_6              1 2 141 142 143
+Convolution              conv_48                  1 1 111 144 0=48 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=3072
+Slice                    chunk_4                  1 4 144 145 146 147 148 -23300=4,-233,-233,-233,-233 1=0
+Slice                    chunk_5                  1 4 81 149 150 151 152 -23300=4,-233,-233,-233,-233 1=0
+Convolution              conv_47                  1 1 143 153 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=48
+Split                    splitncnn_7              1 5 153 154 155 156 157 158
+Concat                   cat_4                    3 1 145 149 154 159 0=0
+Permute                  permute_160              1 1 159 160 0=3
+LayerNorm                ln_99                    1 1 160 161 0=25 1=1.000000e-06 2=1
+Permute                  permute_161              1 1 161 162 0=4
+Concat                   cat_5                    3 1 146 150 155 163 0=0
+Permute                  permute_162              1 1 163 164 0=3
+LayerNorm                ln_100                   1 1 164 165 0=25 1=1.000000e-06 2=1
+Permute                  permute_163              1 1 165 166 0=4
+Concat                   cat_6                    3 1 147 151 156 167 0=0
+Permute                  permute_164              1 1 167 168 0=3
+LayerNorm                ln_101                   1 1 168 169 0=25 1=1.000000e-06 2=1
+Permute                  permute_165              1 1 169 170 0=4
+Concat                   cat_7                    3 1 148 152 157 171 0=0
+Permute                  permute_166              1 1 171 172 0=3
+LayerNorm                ln_102                   1 1 172 173 0=25 1=1.000000e-06 2=1
+Permute                  permute_167              1 1 173 174 0=4
+ConvolutionDepthWise     convdw_237               1 1 174 175 0=25 1=3 11=3 12=7 13=1 14=7 2=7 3=1 4=7 5=1 6=225 7=25
+ConvolutionDepthWise     convdw_236               1 1 170 176 0=25 1=3 11=3 12=5 13=1 14=5 2=5 3=1 4=5 5=1 6=225 7=25
+ConvolutionDepthWise     convdw_235               1 1 166 177 0=25 1=3 11=3 12=2 13=1 14=2 2=2 3=1 4=2 5=1 6=225 7=25
+ConvolutionDepthWise     convdw_234               1 1 162 178 0=25 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=225 7=25
+Concat                   cat_8                    4 1 178 177 176 175 179 0=0
+Permute                  permute_168              1 1 179 180 0=3
+LayerNorm                ln_103                   1 1 180 181 0=100 1=1.000000e-06 2=1
+Permute                  permute_169              1 1 181 182 0=4
+Convolution              conv_49                  1 1 182 183 0=48 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=4800
+Split                    splitncnn_8              1 2 183 184 185
+BinaryOp                 add_12                   2 1 142 184 186 0=0
+Permute                  permute_170              1 1 186 187 0=3
+LayerNorm                ln_104                   1 1 187 188 0=48 1=1.000000e-06 2=1
+Permute                  permute_171              1 1 188 189 0=4
+Slice                    chunk_6                  1 4 189 190 191 192 193 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_1189           0 1 194 0=12 1=12 2=12
+BinaryOp                 mul_13                   2 1 190 194 195 0=2
+MemoryData               pnnx_fold_1208           0 1 196 0=12 1=12 2=1
+Permute                  permute_172              1 1 191 197 0=4
+BinaryOp                 mul_14                   2 1 197 196 198 0=2
+MemoryData               pnnx_fold_1229           0 1 199 0=12 1=12 2=1
+Permute                  permute_173              1 1 192 200 0=2
+BinaryOp                 mul_15                   2 1 200 199 201 0=2
+Convolution              conv_50                  1 1 193 202 0=12 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=144
+GELU                     gelu_77                  1 1 202 203
+Permute                  permute_175              1 1 198 204 0=3
+Permute                  permute_174              1 1 201 205 0=2
+ConvolutionDepthWise     convdw_238               1 1 203 206 0=12 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=108 7=12
+Concat                   cat_9                    4 1 195 204 205 206 207 0=0
+Permute                  permute_176              1 1 207 208 0=3
+LayerNorm                ln_105                   1 1 208 209 0=48 1=1.000000e-06 2=1
+Permute                  permute_177              1 1 209 210 0=4
+ConvolutionDepthWise     convdw_239               1 1 210 211 0=48 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=432 7=48
+GELU                     gelu_78                  1 1 211 212
+Convolution              conv_51                  1 1 212 213 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=1536
+GroupNorm                gn_87                    1 1 213 214 0=4 1=32 2=1.000000e-05 3=1
+Interp                   upsample_26              1 1 214 215 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+GELU                     gelu_7                   1 1 215 216
+Split                    splitncnn_9              1 2 216 217 218
+Convolution              conv_53                  1 1 185 219 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=1536
+Interp                   upsample_22              1 1 219 220 0=2 3=24 4=24 6=1
+Slice                    chunk_7                  1 4 220 221 222 223 224 -23300=4,-233,-233,-233,-233 1=0
+Slice                    chunk_8                  1 4 49 225 226 227 228 -23300=4,-233,-233,-233,-233 1=0
+Convolution              conv_52                  1 1 218 229 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32
+Split                    splitncnn_10             1 5 229 230 231 232 233 234
+Concat                   cat_10                   3 1 221 225 230 235 0=0
+Permute                  permute_178              1 1 235 236 0=3
+LayerNorm                ln_106                   1 1 236 237 0=17 1=1.000000e-06 2=1
+Permute                  permute_179              1 1 237 238 0=4
+Concat                   cat_11                   3 1 222 226 231 239 0=0
+Permute                  permute_180              1 1 239 240 0=3
+LayerNorm                ln_107                   1 1 240 241 0=17 1=1.000000e-06 2=1
+Permute                  permute_181              1 1 241 242 0=4
+Concat                   cat_12                   3 1 223 227 232 243 0=0
+Permute                  permute_182              1 1 243 244 0=3
+LayerNorm                ln_108                   1 1 244 245 0=17 1=1.000000e-06 2=1
+Permute                  permute_183              1 1 245 246 0=4
+Concat                   cat_13                   3 1 224 228 233 247 0=0
+Permute                  permute_184              1 1 247 248 0=3
+LayerNorm                ln_109                   1 1 248 249 0=17 1=1.000000e-06 2=1
+Permute                  permute_185              1 1 249 250 0=4
+ConvolutionDepthWise     convdw_243               1 1 250 251 0=17 1=3 11=3 12=7 13=1 14=7 2=7 3=1 4=7 5=1 6=153 7=17
+ConvolutionDepthWise     convdw_242               1 1 246 252 0=17 1=3 11=3 12=5 13=1 14=5 2=5 3=1 4=5 5=1 6=153 7=17
+ConvolutionDepthWise     convdw_241               1 1 242 253 0=17 1=3 11=3 12=2 13=1 14=2 2=2 3=1 4=2 5=1 6=153 7=17
+ConvolutionDepthWise     convdw_240               1 1 238 254 0=17 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=153 7=17
+Concat                   cat_14                   4 1 254 253 252 251 255 0=0
+Permute                  permute_186              1 1 255 256 0=3
+LayerNorm                ln_110                   1 1 256 257 0=68 1=1.000000e-06 2=1
+Permute                  permute_187              1 1 257 258 0=4
+Convolution              conv_54                  1 1 258 259 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=2176
+Split                    splitncnn_11             1 2 259 260 261
+BinaryOp                 add_16                   2 1 217 260 262 0=0
+Permute                  permute_188              1 1 262 263 0=3
+LayerNorm                ln_111                   1 1 263 264 0=32 1=1.000000e-06 2=1
+Permute                  permute_189              1 1 264 265 0=4
+Slice                    chunk_9                  1 4 265 266 267 268 269 -23300=4,-233,-233,-233,-233 1=0
+MemoryData               pnnx_fold_1530           0 1 270 0=24 1=24 2=8
+BinaryOp                 mul_17                   2 1 266 270 271 0=2
+MemoryData               pnnx_fold_1549           0 1 272 0=24 1=8 2=1
+Permute                  permute_190              1 1 267 273 0=4
+BinaryOp                 mul_18                   2 1 273 272 274 0=2
+MemoryData               pnnx_fold_1570           0 1 275 0=24 1=8 2=1
+Permute                  permute_191              1 1 268 276 0=2
+BinaryOp                 mul_19                   2 1 276 275 277 0=2
+Convolution              conv_55                  1 1 269 278 0=8 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=64
+GELU                     gelu_79                  1 1 278 279
+Permute                  permute_193              1 1 274 280 0=3
+Permute                  permute_192              1 1 277 281 0=2
+ConvolutionDepthWise     convdw_244               1 1 279 282 0=8 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=72 7=8
+Concat                   cat_15                   4 1 271 280 281 282 283 0=0
+Permute                  permute_194              1 1 283 284 0=3
+LayerNorm                ln_112                   1 1 284 285 0=32 1=1.000000e-06 2=1
+Permute                  permute_195              1 1 285 286 0=4
+ConvolutionDepthWise     convdw_245               1 1 286 287 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=288 7=32
+GELU                     gelu_80                  1 1 287 288
+Convolution              conv_56                  1 1 288 289 0=24 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=768
+GroupNorm                gn_88                    1 1 289 290 0=4 1=24 2=1.000000e-05 3=1
+Interp                   upsample_27              1 1 290 291 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+GELU                     gelu_8                   1 1 291 292
+Split                    splitncnn_12             1 2 292 293 294
+Convolution              conv_58                  1 1 261 295 0=24 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=768
+Interp                   upsample_23              1 1 295 296 0=2 3=48 4=48 6=1
+Slice                    chunk_10                 1 4 296 297 298 299 300 -23300=4,-233,-233,-233,-233 1=0
+Slice                    chunk_11                 1 4 17 301 302 303 304 -23300=4,-233,-233,-233,-233 1=0
+Convolution              conv_57                  1 1 294 305 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=24
+Split                    splitncnn_13             1 5 305 306 307 308 309 310
+Concat                   cat_16                   3 1 297 301 306 311 0=0
+Permute                  permute_196              1 1 311 312 0=3
+LayerNorm                ln_113                   1 1 312 313 0=13 1=1.000000e-06 2=1
+Permute                  permute_197              1 1 313 314 0=4
+Concat                   cat_17                   3 1 298 302 307 315 0=0
+Permute                  permute_198              1 1 315 316 0=3
+LayerNorm                ln_114                   1 1 316 317 0=13 1=1.000000e-06 2=1
+Permute                  permute_199              1 1 317 318 0=4
+Concat                   cat_18                   3 1 299 303 308 319 0=0
+Permute                  permute_200              1 1 319 320 0=3
+LayerNorm                ln_115                   1 1 320 321 0=13 1=1.000000e-06 2=1
+Permute                  permute_201              1 1 321 322 0=4
+Concat                   cat_19                   3 1 300 304 309 323 0=0
+Permute                  permute_202              1 1 323 324 0=3
+LayerNorm                ln_116                   1 1 324 325 0=13 1=1.000000e-06 2=1
+Permute                  permute_203              1 1 325 326 0=4
+ConvolutionDepthWise     convdw_249               1 1 326 327 0=13 1=3 11=3 12=7 13=1 14=7 2=7 3=1 4=7 5=1 6=117 7=13
+ConvolutionDepthWise     convdw_248               1 1 322 328 0=13 1=3 11=3 12=5 13=1 14=5 2=5 3=1 4=5 5=1 6=117 7=13
+ConvolutionDepthWise     convdw_247               1 1 318 329 0=13 1=3 11=3 12=2 13=1 14=2 2=2 3=1 4=2 5=1 6=117 7=13
+ConvolutionDepthWise     convdw_246               1 1 314 330 0=13 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=117 7=13
+Concat                   cat_20                   4 1 330 329 328 327 331 0=0
+Permute                  permute_204              1 1 331 332 0=3
+LayerNorm                ln_117                   1 1 332 333 0=52 1=1.000000e-06 2=1
+Permute                  permute_205              1 1 333 334 0=4
+Convolution              conv_59                  1 1 334 335 0=24 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=1248
+Split                    splitncnn_14             1 2 335 336 337
+BinaryOp                 add_20                   2 1 293 336 338 0=0
+Convolution              conv_60                  1 1 338 339 0=16 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=3456
+GroupNorm                gn_89                    1 1 339 340 0=4 1=16 2=1.000000e-05 3=1
+Interp                   upsample_28              1 1 340 341 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+GELU                     gelu_9                   1 1 341 342
+Split                    splitncnn_15             1 2 342 343 344
+Convolution              conv_62                  1 1 337 345 0=16 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=384
+Interp                   upsample_24              1 1 345 346 0=2 3=96 4=96 6=1
+Slice                    chunk_12                 1 4 346 347 348 349 350 -23300=4,-233,-233,-233,-233 1=0
+Slice                    chunk_13                 1 4 11 351 352 353 354 -23300=4,-233,-233,-233,-233 1=0
+Convolution              conv_61                  1 1 344 355 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16
+Split                    splitncnn_16             1 5 355 356 357 358 359 360
+Concat                   cat_21                   3 1 347 351 356 361 0=0
+Permute                  permute_206              1 1 361 362 0=3
+LayerNorm                ln_118                   1 1 362 363 0=9 1=1.000000e-06 2=1
+Permute                  permute_207              1 1 363 364 0=4
+Concat                   cat_22                   3 1 348 352 357 365 0=0
+Permute                  permute_208              1 1 365 366 0=3
+LayerNorm                ln_119                   1 1 366 367 0=9 1=1.000000e-06 2=1
+Permute                  permute_209              1 1 367 368 0=4
+Concat                   cat_23                   3 1 349 353 358 369 0=0
+Permute                  permute_210              1 1 369 370 0=3
+LayerNorm                ln_120                   1 1 370 371 0=9 1=1.000000e-06 2=1
+Permute                  permute_211              1 1 371 372 0=4
+Concat                   cat_24                   3 1 350 354 359 373 0=0
+Permute                  permute_212              1 1 373 374 0=3
+LayerNorm                ln_121                   1 1 374 375 0=9 1=1.000000e-06 2=1
+Permute                  permute_213              1 1 375 376 0=4
+ConvolutionDepthWise     convdw_253               1 1 376 377 0=9 1=3 11=3 12=7 13=1 14=7 2=7 3=1 4=7 5=1 6=81 7=9
+ConvolutionDepthWise     convdw_252               1 1 372 378 0=9 1=3 11=3 12=5 13=1 14=5 2=5 3=1 4=5 5=1 6=81 7=9
+ConvolutionDepthWise     convdw_251               1 1 368 379 0=9 1=3 11=3 12=2 13=1 14=2 2=2 3=1 4=2 5=1 6=81 7=9
+ConvolutionDepthWise     convdw_250               1 1 364 380 0=9 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=81 7=9
+Concat                   cat_25                   4 1 380 379 378 377 381 0=0
+Permute                  permute_214              1 1 381 382 0=3
+LayerNorm                ln_122                   1 1 382 383 0=36 1=1.000000e-06 2=1
+Permute                  permute_215              1 1 383 384 0=4
+Convolution              conv_63                  1 1 384 385 0=16 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=576
+Split                    splitncnn_17             1 2 385 386 387
+BinaryOp                 add_21                   2 1 343 386 388 0=0
+Convolution              conv_64                  1 1 388 389 0=8 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=1152
+GroupNorm                gn_90                    1 1 389 390 0=4 1=8 2=1.000000e-05 3=1
+Interp                   upsample_29              1 1 390 391 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+GELU                     gelu_10                  1 1 391 392
+Split                    splitncnn_18             1 2 392 393 394
+Convolution              conv_66                  1 1 387 395 0=8 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=128
+Interp                   upsample_25              1 1 395 396 0=2 3=192 4=192 6=1
+Slice                    chunk_14                 1 4 396 397 398 399 400 -23300=4,-233,-233,-233,-233 1=0
+Slice                    chunk_15                 1 4 5 401 402 403 404 -23300=4,-233,-233,-233,-233 1=0
+Convolution              conv_65                  1 1 394 405 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8
+Split                    splitncnn_19             1 5 405 406 407 408 409 410
+Concat                   cat_26                   3 1 397 401 406 411 0=0
+Permute                  permute_216              1 1 411 412 0=3
+LayerNorm                ln_123                   1 1 412 413 0=5 1=1.000000e-06 2=1
+Permute                  permute_217              1 1 413 414 0=4
+Concat                   cat_27                   3 1 398 402 407 415 0=0
+Permute                  permute_218              1 1 415 416 0=3
+LayerNorm                ln_124                   1 1 416 417 0=5 1=1.000000e-06 2=1
+Permute                  permute_219              1 1 417 418 0=4
+Concat                   cat_28                   3 1 399 403 408 419 0=0
+Permute                  permute_220              1 1 419 420 0=3
+LayerNorm                ln_125                   1 1 420 421 0=5 1=1.000000e-06 2=1
+Permute                  permute_221              1 1 421 422 0=4
+Concat                   cat_29                   3 1 400 404 409 423 0=0
+Permute                  permute_222              1 1 423 424 0=3
+LayerNorm                ln_126                   1 1 424 425 0=5 1=1.000000e-06 2=1
+Permute                  permute_223              1 1 425 426 0=4
+ConvolutionDepthWise     convdw_257               1 1 426 427 0=5 1=3 11=3 12=7 13=1 14=7 2=7 3=1 4=7 5=1 6=45 7=5
+ConvolutionDepthWise     convdw_256               1 1 422 428 0=5 1=3 11=3 12=5 13=1 14=5 2=5 3=1 4=5 5=1 6=45 7=5
+ConvolutionDepthWise     convdw_255               1 1 418 429 0=5 1=3 11=3 12=2 13=1 14=2 2=2 3=1 4=2 5=1 6=45 7=5
+ConvolutionDepthWise     convdw_254               1 1 414 430 0=5 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=45 7=5
+Concat                   cat_30                   4 1 430 429 428 427 431 0=0
+Permute                  permute_224              1 1 431 432 0=3
+LayerNorm                ln_127                   1 1 432 433 0=20 1=1.000000e-06 2=1
+Permute                  permute_225              1 1 433 434 0=4
+Convolution              conv_67                  1 1 434 435 0=8 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=160
+BinaryOp                 add_22                   2 1 393 435 436 0=0
+Convolution              conv_68                  1 1 436 437 0=1 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8
+Interp                   upsample_35              1 1 437 438 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+Sigmoid                  sigmoid_21               1 1 438 out5
+Interp                   upsample_34              1 1 158 440 0=2 1=3.200000e+01 2=3.200000e+01 6=1
+Sigmoid                  sigmoid_20               1 1 440 out0
+Interp                   upsample_33              1 1 234 442 0=2 1=1.600000e+01 2=1.600000e+01 6=1
+Sigmoid                  sigmoid_19               1 1 442 out1
+Interp                   upsample_32              1 1 310 444 0=2 1=8.000000e+00 2=8.000000e+00 6=1
+Sigmoid                  sigmoid_18               1 1 444 out2
+Interp                   upsample_31              1 1 360 446 0=2 1=4.000000e+00 2=4.000000e+00 6=1
+Sigmoid                  sigmoid_17               1 1 446 out3
+Interp                   upsample_30              1 1 410 448 0=2 1=2.000000e+00 2=2.000000e+00 6=1
+Sigmoid                  sigmoid_16               1 1 448 out4
