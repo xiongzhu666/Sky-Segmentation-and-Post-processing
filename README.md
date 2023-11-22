@@ -13,6 +13,9 @@ mask_refine.cpp is for mask post-process to refine the mask. inputs are image an
 
 The Sky-mask Post-Processing show a good performence in the scene of tree as below. it retain much more details.In addition, the post-process is only for sky-mask.perhaps it won't get the same good performance when you apply it on other class segmentation.
 
+**2023/11/22 Update: EGE-unet and u2netp speed test**
+![test](https://github.com/xiongzhu666/Sky-Segmentation-and-Post-processing/blob/main/result_compare/test.jpg)
+
 **2021/12/29 Update: upload code interenced by onnxruntime, you need to install the package by pip install onnxruntime**
 
 onnx model(167M) baiduyun：https://pan.baidu.com/s/1bE38w422STSwuJwjPpRIMw      code：4tmm
